@@ -11,6 +11,7 @@
   <meta property="og:image" content="./assets/quickstack-og.png" />
   <meta property="og:url" content="https://example.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="./assets/quickstack-icon.png" />
   <link rel="stylesheet" href="./assets/site.css" />
 </head>
 
@@ -43,6 +44,10 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
+        <picture>
+          <source srcset="./assets/quickstack-icon.webp" type="image/webp">
+          <img class="hero-app-icon" src="./assets/quickstack-icon.png" alt="QUICKSTACK アイコン">
+        </picture>
         <div class="eyebrow">小規模物販向け在庫管理</div>
         <h1 class="hero-title"><span class="line">商品数が増えても、</span><span class="line accent">在庫を追える状態に。</span></h1>
         <p class="lead">QUICKSTACKは、商品・在庫・入出庫・棚卸・画像・CSV・バーコード運用をまとめて扱う在庫管理アプリです。複雑な見た目を避け、初心者でも作業位置が分かりやすい画面で日々の在庫管理を行えます。</p>
@@ -168,8 +173,8 @@
 
 
 <div class="mobile-bottom-cta" aria-label="Mobile quick actions">
-  <a class="primary" href="#">利用開始へ</a>
-  <a href="./quickpost.html">発送も見る</a>
+  <a class="primary" href="#"><img class="mini-cta-icon" src="./assets/quickstack-icon.png" alt="">利用開始へ</a>
+  <a href="./quickpost.html"><img class="mini-cta-icon" src="./assets/quickpost-icon.png" alt="">発送も見る</a>
 </div>
 </body>
 </html>

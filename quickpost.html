@@ -11,6 +11,7 @@
   <meta property="og:image" content="./assets/quickpost-og.png" />
   <meta property="og:url" content="https://example.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="./assets/quickstack-icon.png" />
   <link rel="stylesheet" href="./assets/site.css" />
 </head>
 
@@ -43,6 +44,10 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
+        <picture>
+          <source srcset="./assets/quickpost-icon.webp" type="image/webp">
+          <img class="hero-app-icon" src="./assets/quickpost-icon.png" alt="QUICKポスト アイコン">
+        </picture>
         <div class="eyebrow">発送作業補助アプリ</div>
         <h1 class="hero-title"><span class="line">クリックポスト入力を、</span><span class="line accent">もっと短く、迷わず。</span></h1>
         <p class="lead">QUICKポストは、フリマ・ECの注文ページからコピーした情報を貼り付け、郵便番号・住所・氏名を整理する発送補助アプリです。細かい範囲選択、手入力、何度も行うコピー作業を減らします。</p>
@@ -146,8 +151,8 @@
 
 
 <div class="mobile-bottom-cta" aria-label="Mobile quick actions">
-  <a class="primary" href="#">利用開始へ</a>
-  <a href="./quickstack.html">在庫も見る</a>
+  <a class="primary" href="#"><img class="mini-cta-icon" src="./assets/quickpost-icon.png" alt="">利用開始へ</a>
+  <a href="./quickstack.html"><img class="mini-cta-icon" src="./assets/quickstack-icon.png" alt="">在庫も見る</a>
 </div>
 </body>
 </html>

@@ -11,6 +11,7 @@
   <meta property="og:image" content="./assets/og.png" />
   <meta property="og:url" content="https://example.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="./assets/quickstack-icon.png" />
   <link rel="stylesheet" href="./assets/site.css" />
 </head>
 
@@ -63,7 +64,10 @@
       <div class="visual-wrap">
         <div class="visual-stack">
           <a class="product-tile" href="./quickpost.html">
-            <div class="tile-icon">P</div>
+            <picture>
+  <source srcset="./assets/quickpost-icon.webp" type="image/webp">
+  <img class="app-icon-img" src="./assets/quickpost-icon.png" alt="QUICKポスト アイコン">
+</picture>
             <div>
               <div class="tile-kicker">Shipping Support</div>
               <div class="tile-title">QUICKポスト</div>
@@ -71,7 +75,10 @@
             </div>
           </a>
           <a class="product-tile" href="./quickstack.html">
-            <div class="tile-icon green">S</div>
+            <picture>
+  <source srcset="./assets/quickstack-icon.webp" type="image/webp">
+  <img class="app-icon-img" src="./assets/quickstack-icon.png" alt="QUICKSTACK アイコン">
+</picture>
             <div>
               <div class="tile-kicker">Inventory SaaS</div>
               <div class="tile-title">QUICKSTACK</div>
@@ -111,7 +118,10 @@
 </div>
           <div class="app-body">
             <div class="tag">発送作業補助</div>
-            <h3>QUICKポスト</h3>
+            <div class="app-title-row"><picture>
+  <source srcset="./assets/quickpost-icon.webp" type="image/webp">
+  <img class="app-icon-img" src="./assets/quickpost-icon.png" alt="QUICKポスト アイコン">
+</picture><h3>QUICKポスト</h3></div>
             <p class="app-copy">フリマ・ECの注文情報を貼り付け、クリックポスト入力に必要な郵便番号・住所・氏名を整理する発送補助アプリです。</p>
             <div class="meta-grid">
               <div class="meta"><small>For</small><strong>メルカリ・ヤフオク・ラクマ・小規模EC</strong></div>
@@ -141,7 +151,10 @@
 </div>
           <div class="app-body">
             <div class="tag green">在庫管理</div>
-            <h3>QUICKSTACK</h3>
+            <div class="app-title-row"><picture>
+  <source srcset="./assets/quickstack-icon.webp" type="image/webp">
+  <img class="app-icon-img" src="./assets/quickstack-icon.png" alt="QUICKSTACK アイコン">
+</picture><h3>QUICKSTACK</h3></div>
             <p class="app-copy">商品・在庫・入出庫・棚卸・販売データを管理し、在庫ズレや確認作業を減らす小規模物販向け在庫管理アプリです。</p>
             <div class="meta-grid">
               <div class="meta"><small>For</small><strong>商品数を増やしたい物販事業者</strong></div>
@@ -232,8 +245,8 @@
 
 
 <div class="mobile-bottom-cta" aria-label="Mobile quick actions">
-  <a class="primary" href="./quickpost.html">発送を短く</a>
-  <a href="./quickstack.html">在庫を整える</a>
+  <a class="primary" href="./quickpost.html"><img class="mini-cta-icon" src="./assets/quickpost-icon.png" alt="">発送を短く</a>
+  <a href="./quickstack.html"><img class="mini-cta-icon" src="./assets/quickstack-icon.png" alt="">在庫を整える</a>
 </div>
 </body>
 </html>
