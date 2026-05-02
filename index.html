@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>DIYstation Apps | 物販作業を短くするアプリ一覧</title>
   <meta name="description" content="QUICKポスト、QUICKSTACKなど、小規模物販・フリマ販売者の発送、在庫管理、出品準備を効率化するアプリ一覧ページです。" />
   <meta property="og:title" content="DIYstation Apps | 物販作業を短くするアプリ一覧" />
@@ -27,9 +27,17 @@
       <a href="./quickpost.html">QUICKポスト</a>
       <a href="./quickstack.html">QUICKSTACK</a>
       <a class="nav-cta" href="./index.html#apps">アプリを見る</a>
+      <button class="mobile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-mobile-menu>☰</button>
     </nav>
   </div>
 </header>
+
+<div class="mobile-drawer" aria-label="Mobile navigation">
+  <a href="./index.html#apps">アプリ一覧を見る</a>
+  <a href="./quickpost.html">QUICKポストを見る</a>
+  <a href="./quickstack.html">QUICKSTACKを見る</a>
+  <a class="primary" href="./index.html#apps">用途から選ぶ</a>
+</div>
 
 <main>
   <section class="hero">
@@ -238,5 +246,10 @@
 </footer>
 <script src="./assets/site.js"></script>
 
+
+<div class="mobile-bottom-cta" aria-label="Mobile quick actions">
+  <a class="primary" href="./quickpost.html">発送を短く</a>
+  <a href="./quickstack.html">在庫を整える</a>
+</div>
 </body>
 </html>

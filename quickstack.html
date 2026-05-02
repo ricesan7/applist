@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>QUICKSTACK | 小規模物販向け在庫管理アプリ</title>
   <meta name="description" content="QUICKSTACKは、商品・在庫・入出庫・棚卸・画像・CSV・バーコード運用をまとめて扱う、小規模物販向けの在庫管理アプリです。" />
   <meta property="og:title" content="QUICKSTACK | 小規模物販向け在庫管理アプリ" />
@@ -27,9 +27,17 @@
       <a href="./quickpost.html">QUICKポスト</a>
       <a href="./quickstack.html">QUICKSTACK</a>
       <a class="nav-cta" href="./index.html#apps">アプリを見る</a>
+      <button class="mobile-menu-button" type="button" aria-label="メニューを開く" aria-expanded="false" data-mobile-menu>☰</button>
     </nav>
   </div>
 </header>
+
+<div class="mobile-drawer" aria-label="Mobile navigation">
+  <a href="./index.html#apps">アプリ一覧を見る</a>
+  <a href="./quickpost.html">QUICKポストを見る</a>
+  <a href="./quickstack.html">QUICKSTACKを見る</a>
+  <a class="primary" href="./index.html#apps">用途から選ぶ</a>
+</div>
 
 <main>
   <section class="hero">
@@ -167,5 +175,10 @@
 </footer>
 <script src="./assets/site.js"></script>
 
+
+<div class="mobile-bottom-cta" aria-label="Mobile quick actions">
+  <a class="primary" href="#">利用開始へ</a>
+  <a href="./quickpost.html">発送も見る</a>
+</div>
 </body>
 </html>
