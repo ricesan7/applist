@@ -15,3 +15,14 @@ DIYstation Apps Professional Site
 - href="#" の「利用開始ページへ」
 - meta property="og:url" の https://example.com/
 - OG画像を使う場合は assets/og.png / quickpost-og.png / quickstack-og.png を追加してください。
+
+
+スマホ最適化版の変更点:
+- viewport-fit=cover 対応
+- スマホ用ハンバーガーメニュー追加
+- スマホ下部固定CTA追加
+- ファーストビューの高さと文字量をスマホ向けに調整
+- タップ領域を44px以上に調整
+- 横スクロール防止
+- 360px前後の小さい画面でも破綻しにくいCSSを追加
+- セクション見出しをスマホでは左寄せにして読みやすく調整
