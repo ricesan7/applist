@@ -44,9 +44,15 @@ DIYstation Apps Professional Site
 - .hero-title .line に white-space: nowrap を追加し、「物販の面倒な作業を、」が途中で割れにくいように調整
 
 
-見出しデザイン調整 v3:
-- サイズは v2 を維持
-- 2行目の青文字を単色からグラデーションに変更
-- 2行目の下に薄いハイライトを追加
-- 行途中の改行を防ぐ指定は維持
-- 小さくしすぎて地味に見える問題を、装飾で補正
+QUICKSTACK実画面反映:
+- assets/quickstack-screen.png を追加
+- assets/quickstack-screen.webp を追加
+- index.html のQUICKSTACKカードを実画面に差し替え
+- quickstack.html のヒーロー画像を実画面に差し替え
+
+
+QUICKポスト実画面反映:
+- assets/quickpost-screen.png を追加
+- assets/quickpost-screen.webp を追加
+- index.html のQUICKポストカードを実画面に差し替え
+- quickpost.html のヒーロー画像を実画面に差し替え
