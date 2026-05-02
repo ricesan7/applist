@@ -65,3 +65,8 @@ QUICKポスト実画面反映:
 - quickpost.html / quickstack.html のヒーローに各アイコンを反映
 - スマホ下部CTAにも小アイコンを反映
 - favicon は QUICKSTACK アイコンに設定
+
+
+QUICKSTACK画像差し替え:
+- assets/quickstack-screen.png を新しいダッシュボード画像に差し替え
+- assets/quickstack-screen.webp を新しいダッシュボード画像に差し替え
