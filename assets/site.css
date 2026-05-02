@@ -926,3 +926,78 @@ a, button {
     letter-spacing: -0.03em !important;
   }
 }
+
+
+/* =========================================================
+   Hero heading style upgrade
+   - keep clean line breaks
+   - add more visual character
+   ========================================================= */
+.hero-title {
+  font-size: clamp(34px, 4vw, 48px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.045em !important;
+  font-weight: 950;
+  max-width: 100%;
+}
+
+.hero-title .line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-title .line + .line {
+  margin-top: 0.02em;
+}
+
+.hero-title .accent {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.04em;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 55%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-title .accent::after {
+  content: "";
+  position: absolute;
+  left: 0.02em;
+  right: 0.02em;
+  bottom: 0.10em;
+  height: 0.22em;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.14);
+  z-index: -1;
+}
+
+@media (max-width: 760px) {
+  .hero-title {
+    font-size: clamp(24px, 7vw, 31px) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .hero-title .line + .line {
+    margin-top: 0.03em;
+  }
+
+  .hero-title .accent::after {
+    bottom: 0.11em;
+    height: 0.20em;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: clamp(22px, 6.7vw, 27px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .hero-title .accent::after {
+    bottom: 0.12em;
+    height: 0.18em;
+  }
+}

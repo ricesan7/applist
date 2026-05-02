@@ -42,3 +42,11 @@ DIYstation Apps Professional Site
 - スマホ: clamp(24px, 7vw, 31px)
 - 380px以下: clamp(22px, 6.7vw, 27px)
 - .hero-title .line に white-space: nowrap を追加し、「物販の面倒な作業を、」が途中で割れにくいように調整
+
+
+見出しデザイン調整 v3:
+- サイズは v2 を維持
+- 2行目の青文字を単色からグラデーションに変更
+- 2行目の下に薄いハイライトを追加
+- 行途中の改行を防ぐ指定は維持
+- 小さくしすぎて地味に見える問題を、装飾で補正
