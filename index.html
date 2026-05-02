@@ -3,879 +3,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>DIYstation Apps | QUICKポスト・QUICKSTACK</title>
-  <meta name="description" content="発送作業を速くするQUICKポスト、在庫管理を見える化するQUICKSTACK。小規模物販・フリマ販売者向けの業務効率化アプリ一覧ページです。" />
-
-  <meta property="og:title" content="DIYstation Apps | 物販作業をラクにするアプリ一覧" />
-  <meta property="og:description" content="QUICKポストとQUICKSTACKを1ページで紹介。発送・在庫管理の手間を減らす小規模物販向けアプリ。" />
+  <title>DIYstation Apps | 物販作業を短くするアプリ一覧</title>
+  <meta name="description" content="QUICKポスト、QUICKSTACKなど、小規模物販・フリマ販売者の発送、在庫管理、出品準備を効率化するアプリ一覧ページです。" />
+  <meta property="og:title" content="DIYstation Apps | 物販作業を短くするアプリ一覧" />
+  <meta property="og:description" content="QUICKポスト、QUICKSTACKなど、小規模物販・フリマ販売者の発送、在庫管理、出品準備を効率化するアプリ一覧ページです。" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="./assets/og.png" />
   <meta property="og:url" content="https://example.com/" />
-
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --bg-dark: #0f172a;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --accent: #06b6d4;
-      --green: #16a34a;
-      --orange: #f97316;
-      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-      --radius: 24px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #eef4ff 0%, #f8fafc 38%, #ffffff 100%);
-      color: var(--text);
-      line-height: 1.75;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(255, 255, 255, 0.82);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-    }
-
-    .header-inner {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
-
-    .brand-logo {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 900;
-      overflow: hidden;
-    }
-
-    .brand-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .header-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 38px;
-      padding: 0 16px;
-      border-radius: 999px;
-      background: var(--text);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .hero {
-      padding: 56px 0 34px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.08);
-      color: var(--primary-dark);
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(32px, 5vw, 58px);
-      line-height: 1.12;
-      letter-spacing: -0.055em;
-    }
-
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero-lead {
-      margin: 20px 0 0;
-      color: var(--muted);
-      font-size: clamp(15px, 2.2vw, 18px);
-      max-width: 620px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 999px;
-      font-size: 15px;
-      font-weight: 800;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: var(--text);
-      border: 1px solid var(--line);
-    }
-
-    .hero-panel {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      inset: -80px -80px auto auto;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: rgba(6, 182, 212, 0.14);
-    }
-
-    .mini-stack {
-      display: grid;
-      gap: 14px;
-      position: relative;
-    }
-
-    .mini-card {
-      padding: 18px;
-      border-radius: 20px;
-      background: #f8fafc;
-      border: 1px solid var(--line);
-    }
-
-    .mini-label {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .mini-title {
-      margin-top: 6px;
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-    }
-
-    .mini-desc {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .section {
-      padding: 34px 0;
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 26px;
-    }
-
-    .section-kicker {
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      margin: 8px 0 0;
-      font-size: clamp(26px, 4vw, 40px);
-      line-height: 1.25;
-      letter-spacing: -0.045em;
-    }
-
-    .section-desc {
-      margin: 12px auto 0;
-      max-width: 680px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .app-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .app-visual {
-      background: linear-gradient(135deg, #dbeafe, #ecfeff);
-      min-height: 230px;
-      padding: 20px;
-      display: grid;
-      place-items: center;
-    }
-
-    .app-visual.dark {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-    }
-
-    .app-visual img {
-      width: min(100%, 460px);
-      border-radius: 20px;
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.18);
-    }
-
-    .app-body {
-      padding: 24px;
-    }
-
-    .app-tag {
-      display: inline-flex;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      background: #eff6ff;
-      color: var(--primary-dark);
-      margin-bottom: 12px;
-    }
-
-    .app-tag.green {
-      background: #ecfdf5;
-      color: #15803d;
-    }
-
-    .app-name {
-      margin: 0;
-      font-size: 27px;
-      line-height: 1.2;
-      letter-spacing: -0.04em;
-    }
-
-    .app-copy {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .feature-list {
-      margin: 18px 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .feature-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: #334155;
-      font-size: 14px;
-    }
-
-    .check {
-      flex: 0 0 auto;
-      width: 21px;
-      height: 21px;
-      border-radius: 50%;
-      background: rgba(37, 99, 235, 0.1);
-      color: var(--primary);
-      display: grid;
-      place-items: center;
-      font-size: 13px;
-      font-weight: 900;
-      margin-top: 1px;
-    }
-
-    .check.green {
-      background: rgba(22, 163, 74, 0.1);
-      color: var(--green);
-    }
-
-    .app-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .app-actions .btn {
-      min-height: 44px;
-      font-size: 14px;
-      padding: 0 16px;
-    }
-
-    .compare {
-      background: var(--bg-dark);
-      color: #fff;
-      border-radius: 30px;
-      padding: 30px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .compare::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      bottom: -80px;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: rgba(37, 99, 235, 0.35);
-    }
-
-    .compare-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .compare h2 {
-      margin: 0;
-      font-size: clamp(25px, 4vw, 38px);
-      line-height: 1.25;
-      letter-spacing: -0.045em;
-    }
-
-    .compare p {
-      margin: 14px 0 0;
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-
-    .compare-table {
-      display: grid;
-      gap: 12px;
-    }
-
-    .compare-row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 14px;
-      padding: 14px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .compare-label {
-      color: #93c5fd;
-      font-weight: 900;
-      font-size: 14px;
-    }
-
-    .compare-text {
-      color: #f8fafc;
-      font-size: 14px;
-    }
-
-    .flow {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .flow-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
-    }
-
-    .flow-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
-      background: #eff6ff;
-      color: var(--primary);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      margin-bottom: 12px;
-    }
-
-    .flow-card h3 {
-      margin: 0;
-      font-size: 18px;
-      letter-spacing: -0.02em;
-    }
-
-    .flow-card p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .final-cta {
-      margin: 36px 0 54px;
-      background: linear-gradient(135deg, var(--primary), #0f172a);
-      color: #fff;
-      border-radius: 32px;
-      padding: 34px;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.22);
-    }
-
-    .final-cta h2 {
-      margin: 0;
-      font-size: clamp(26px, 4vw, 42px);
-      line-height: 1.25;
-      letter-spacing: -0.045em;
-    }
-
-    .final-cta p {
-      margin: 14px auto 0;
-      max-width: 680px;
-      color: #dbeafe;
-      font-size: 15px;
-    }
-
-    .final-cta .hero-actions {
-      justify-content: center;
-    }
-
-    .final-cta .btn-secondary {
-      background: #fff;
-      border: none;
-    }
-
-    .footer {
-      border-top: 1px solid var(--line);
-      padding: 26px 0 40px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 820px) {
-      .header-inner {
-        height: 58px;
-      }
-
-      .header-cta {
-        height: 34px;
-        padding: 0 12px;
-        font-size: 12px;
-      }
-
-      .hero {
-        padding-top: 36px;
-      }
-
-      .hero-grid,
-      .apps,
-      .compare-inner,
-      .flow {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-panel {
-        padding: 16px;
-      }
-
-      .app-visual {
-        min-height: 190px;
-      }
-
-      .compare {
-        padding: 24px;
-      }
-
-      .compare-row {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .final-cta {
-        padding: 28px 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .page,
-      .header-inner {
-        width: min(100% - 22px, 1120px);
-      }
-
-      .brand span {
-        font-size: 14px;
-      }
-
-      .hero-actions,
-      .app-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .app-body {
-        padding: 20px;
-      }
-
-      .section {
-        padding: 28px 0;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./assets/site.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <a href="#" class="brand">
-        <div class="brand-logo">
-          <!-- ロゴ画像を使う場合は下のコメントを外す -->
-          <!-- <img src="./assets/logo.png" alt="DIYstation"> -->
-          DS
+
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="./index.html" aria-label="DIYstation Apps">
+      <div class="logo-mark">DS</div>
+      <span>DIYstation Apps</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="./index.html#apps">アプリ一覧</a>
+      <a href="./quickpost.html">QUICKポスト</a>
+      <a href="./quickstack.html">QUICKSTACK</a>
+      <a class="nav-cta" href="./index.html#apps">アプリを見る</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">小規模物販・フリマ販売者向け</div>
+        <h1>物販の面倒な作業を、<br><span>ひとつずつ短くする。</span></h1>
+        <p class="lead">
+          DIYstation Appsは、発送入力、在庫管理、画像登録、CSV運用など、物販で積み上がる細かい作業負担を減らすためのアプリ群です。まずは一覧ページで用途を選び、詳しい機能は各アプリの個別LPで確認できます。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="./quickpost.html">発送作業を短くする</a>
+          <a class="btn btn-secondary" href="./quickstack.html">在庫管理を整える</a>
         </div>
-        <span>DIYstation Apps</span>
-      </a>
-      <a href="#apps" class="header-cta">アプリを見る</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="page hero-grid">
-        <div>
-          <div class="badge">
-            <span class="badge-dot"></span>
-            小規模物販・フリマ販売者向け
-          </div>
-
-          <h1>
-            めんどくさい物販作業を、<br>
-            <span>アプリで短くする。</span>
-          </h1>
-
-          <p class="hero-lead">
-            発送ラベル入力を速くする「QUICKポスト」と、在庫管理を見える化する「QUICKSTACK」。
-            日々の出品・発送・棚卸・在庫確認にかかる手間を減らすためのアプリ一覧ページです。
-          </p>
-
-          <div class="hero-actions">
-            <a href="#quickpost" class="btn btn-primary">QUICKポストを見る</a>
-            <a href="#quickstack" class="btn btn-secondary">QUICKSTACKを見る</a>
-          </div>
-        </div>
-
-        <div class="hero-panel">
-          <div class="mini-stack">
-            <div class="mini-card">
-              <div class="mini-label">Shipping Support</div>
-              <div class="mini-title">QUICKポスト</div>
-              <div class="mini-desc">
-                住所コピーからクリックポスト入力までの作業を短縮。
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <div class="mini-label">Inventory SaaS</div>
-              <div class="mini-title">QUICKSTACK</div>
-              <div class="mini-desc">
-                商品・在庫・棚卸・販売データを見える化。
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <div class="mini-label">Target</div>
-              <div class="mini-title">物販の作業負担を減らす</div>
-              <div class="mini-desc">
-                メルカリ、ヤフオク、フリマ販売、小規模ECの運用を想定。
-              </div>
-            </div>
-          </div>
+        <div class="hero-proof">
+          <div class="proof"><strong>発送</strong><span>住所整理・クリックポスト入力の負担を軽減</span></div>
+          <div class="proof"><strong>在庫</strong><span>入出庫・棚卸・在庫金額を見える化</span></div>
+          <div class="proof"><strong>画像</strong><span>SKU名画像の一括登録運用を想定</span></div>
+          <div class="proof"><strong>CSV</strong><span>既存管理から移行しやすい入出力設計</span></div>
         </div>
       </div>
-    </section>
 
-    <section id="apps" class="section">
-      <div class="page">
-        <div class="section-head">
-          <div class="section-kicker">Apps</div>
-          <h2 class="section-title">作成アプリ一覧</h2>
-          <p class="section-desc">
-            SNSから来た人が迷わず内容を把握できるよう、各アプリの目的・向いている人・主な機能を1ページに集約しています。
-          </p>
-        </div>
-
-        <div class="apps">
-          <article id="quickpost" class="app-card">
-            <div class="app-visual">
-              <img src="./assets/quickpost.png" alt="QUICKポスト アプリ画面">
-            </div>
-
-            <div class="app-body">
-              <div class="app-tag">発送作業補助</div>
-              <h3 class="app-name">QUICKポスト</h3>
-              <p class="app-copy">
-                フリマ・ECの注文情報をコピーして、クリックポスト入力用に住所・氏名・郵便番号を整理する発送補助アプリです。
-              </p>
-
-              <ul class="feature-list">
-                <li>
-                  <span class="check">✓</span>
-                  <span>注文ページの情報を貼り付けて、宛名情報を整理</span>
-                </li>
-                <li>
-                  <span class="check">✓</span>
-                  <span>クリックポスト入力作業のコピペ負担を軽減</span>
-                </li>
-                <li>
-                  <span class="check">✓</span>
-                  <span>サーマルラベル印刷を前提にした作業効率化に対応</span>
-                </li>
-                <li>
-                  <span class="check">✓</span>
-                  <span>メルカリ・ヤフオク・フリマ発送が多い人向け</span>
-                </li>
-              </ul>
-
-              <div class="app-actions">
-                <a href="#" class="btn btn-primary">アプリページへ</a>
-                <a href="#compare" class="btn btn-secondary">用途を見る</a>
-              </div>
-            </div>
-          </article>
-
-          <article id="quickstack" class="app-card">
-            <div class="app-visual dark">
-              <img src="./assets/quickstack.png" alt="QUICKSTACK アプリ画面">
-            </div>
-
-            <div class="app-body">
-              <div class="app-tag green">在庫管理</div>
-              <h3 class="app-name">QUICKSTACK</h3>
-              <p class="app-copy">
-                商品・在庫・入出庫・棚卸・販売データを管理し、小規模物販の在庫ズレや確認作業を減らす在庫管理アプリです。
-              </p>
-
-              <ul class="feature-list">
-                <li>
-                  <span class="check green">✓</span>
-                  <span>SKU・商品画像・在庫数をまとめて管理</span>
-                </li>
-                <li>
-                  <span class="check green">✓</span>
-                  <span>入庫・出庫・棚卸の履歴を記録</span>
-                </li>
-                <li>
-                  <span class="check green">✓</span>
-                  <span>QR・バーコード運用やセット販売管理にも拡張可能</span>
-                </li>
-                <li>
-                  <span class="check green">✓</span>
-                  <span>販売データから改善点を見つけたい物販事業者向け</span>
-                </li>
-              </ul>
-
-              <div class="app-actions">
-                <a href="#" class="btn btn-primary">アプリページへ</a>
-                <a href="#compare" class="btn btn-secondary">用途を見る</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="compare" class="section">
-      <div class="page">
-        <div class="compare">
-          <div class="compare-inner">
+      <div class="visual-wrap">
+        <div class="visual-stack">
+          <a class="product-tile" href="./quickpost.html">
+            <div class="tile-icon">P</div>
             <div>
-              <h2>発送はQUICKポスト。<br>在庫はQUICKSTACK。</h2>
-              <p>
-                2つのアプリは別機能ですが、どちらも物販作業の手間を減らす目的で設計しています。
-                SNSからの流入では、最初に自分の悩みに近いアプリへ進める構成が適しています。
-              </p>
+              <div class="tile-kicker">Shipping Support</div>
+              <div class="tile-title">QUICKポスト</div>
+              <div class="tile-desc">注文情報を貼り付け、クリックポスト入力前の宛名整理を短くします。</div>
             </div>
-
-            <div class="compare-table">
-              <div class="compare-row">
-                <div class="compare-label">発送作業</div>
-                <div class="compare-text">
-                  QUICKポスト。住所入力、宛名整理、クリックポスト入力の手間を減らしたい人向け。
-                </div>
-              </div>
-
-              <div class="compare-row">
-                <div class="compare-label">在庫管理</div>
-                <div class="compare-text">
-                  QUICKSTACK。商品数が増えて、在庫数・棚卸・履歴管理を整理したい人向け。
-                </div>
-              </div>
-
-              <div class="compare-row">
-                <div class="compare-label">対象ユーザー</div>
-                <div class="compare-text">
-                  メルカリ、ヤフオク、ラクマ、Yahoo!フリマ、小規模EC、個人事業主の物販運用。
-                </div>
-              </div>
-
-              <div class="compare-row">
-                <div class="compare-label">目的</div>
-                <div class="compare-text">
-                  手入力、確認漏れ、在庫ズレ、発送前後の作業負担を減らし、日々の運用を軽くすること。
-                </div>
-              </div>
+          </a>
+          <a class="product-tile" href="./quickstack.html">
+            <div class="tile-icon green">S</div>
+            <div>
+              <div class="tile-kicker">Inventory SaaS</div>
+              <div class="tile-title">QUICKSTACK</div>
+              <div class="tile-desc">商品・在庫・棚卸・CSV・バーコード運用をまとめて管理します。</div>
+            </div>
+          </a>
+          <div class="product-tile">
+            <div class="tile-icon">＋</div>
+            <div>
+              <div class="tile-kicker">Expandable</div>
+              <div class="tile-title">今後のアプリ追加にも対応</div>
+              <div class="tile-desc">出品補助、原価計算、画像作成などをカード追加で展開できます。</div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="page">
-        <div class="section-head">
-          <div class="section-kicker">Flow</div>
-          <h2 class="section-title">SNSから迷わず誘導する構成</h2>
-          <p class="section-desc">
-            投稿から訪問した人が、ページを長く読まなくても用途を判断できる流れにしています。
-          </p>
-        </div>
+  <section id="apps" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Apps</div>
+        <h2 class="section-title">作成アプリ一覧</h2>
+        <p class="section-desc">一覧ページでは「自分に必要なアプリ」を判断させ、詳細説明は個別LPへ分けます。SNSやプロフィールリンクからの流入に向いた構成です。</p>
+      </div>
 
-        <div class="flow">
-          <div class="flow-card">
-            <div class="flow-num">1</div>
-            <h3>悩みで判断</h3>
-            <p>
-              発送入力が面倒ならQUICKポスト。在庫管理が面倒ならQUICKSTACK。
-            </p>
+      <div class="cards-2">
+        <article class="app-card">
+          <div class="app-screen">
+<div class="mock-phone">
+  <div class="mock-screen">
+    <div class="mock-top"><div class="mock-logo"></div><div class="mock-pill"></div></div>
+    <div class="mock-grid">
+      <div class="mock-row blue"></div>
+      <div class="mock-row"></div>
+      <div class="mock-row short"></div>
+      <div class="mock-row"></div>
+      <div class="mock-row blue"></div>
+    </div>
+  </div>
+</div>
+</div>
+          <div class="app-body">
+            <div class="tag">発送作業補助</div>
+            <h3>QUICKポスト</h3>
+            <p class="app-copy">フリマ・ECの注文情報を貼り付け、クリックポスト入力に必要な郵便番号・住所・氏名を整理する発送補助アプリです。</p>
+            <div class="meta-grid">
+              <div class="meta"><small>For</small><strong>メルカリ・ヤフオク・ラクマ・小規模EC</strong></div>
+              <div class="meta"><small>Benefit</small><strong>住所整理、入力ミス、コピペ回数を削減</strong></div>
+            </div>
+            <ul class="check-list">
+              <li>注文ページの情報を貼り付けて、宛名情報を整理</li>
+              <li>クリックポスト入力前の細かい作業を短縮</li>
+              <li>サーマルラベル印刷を使う発送フローと相性が良い設計</li>
+              <li>PCでのクリップボード貼り付け登録にも対応しやすい構成</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="./quickpost.html">QUICKポスト詳細へ</a>
+              <a class="btn btn-secondary" href="#compare">用途を見る</a>
+            </div>
           </div>
+        </article>
 
-          <div class="flow-card">
-            <div class="flow-num">2</div>
-            <h3>機能を確認</h3>
-            <p>
-              各カードで、何ができるアプリかを短時間で確認できます。
-            </p>
+        <article class="app-card">
+          <div class="app-screen dark">
+<div class="mock-phone">
+  <div class="mock-screen">
+    <div class="mock-top"><div class="mock-logo"></div><div class="mock-pill"></div></div>
+    <div class="mock-dashboard">
+      <div class="mock-stat"><b>820</b><span>商品数</span></div>
+      <div class="mock-stat"><b>3,460</b><span>総在庫</span></div>
+      <div class="mock-stat"><b>18</b><span>アラート</span></div>
+      <div class="mock-stat"><b>184万</b><span>在庫総額</span></div>
+    </div>
+    <div class="mock-grid" style="margin-top:12px">
+      <div class="mock-row green"></div>
+      <div class="mock-row"></div>
+      <div class="mock-row short"></div>
+    </div>
+  </div>
+</div>
+</div>
+          <div class="app-body">
+            <div class="tag green">在庫管理</div>
+            <h3>QUICKSTACK</h3>
+            <p class="app-copy">商品・在庫・入出庫・棚卸・販売データを管理し、在庫ズレや確認作業を減らす小規模物販向け在庫管理アプリです。</p>
+            <div class="meta-grid">
+              <div class="meta"><small>For</small><strong>商品数を増やしたい物販事業者</strong></div>
+              <div class="meta"><small>Benefit</small><strong>在庫把握、棚卸、商品登録、販売判断を整理</strong></div>
+            </div>
+            <ul class="check-list green">
+              <li>SKU・商品画像・在庫数・仕入価格・販売価格を管理</li>
+              <li>入庫・出庫・棚卸の履歴をあとから確認</li>
+              <li>CSV入出力、バーコード印刷、SKU名画像の一括登録を想定</li>
+              <li>販売データから改善点を見つけるAIアドバイス導線に対応</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="./quickstack.html">QUICKSTACK詳細へ</a>
+              <a class="btn btn-secondary" href="#compare">用途を見る</a>
+            </div>
           </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-          <div class="flow-card">
-            <div class="flow-num">3</div>
-            <h3>詳細ページへ移動</h3>
-            <p>
-              興味のあるアプリだけ、個別LPやデモページへ誘導します。
-            </p>
+  <section id="compare" class="section">
+    <div class="container">
+      <div class="dark-panel">
+        <div class="dark-grid">
+          <div>
+            <h2>発送はQUICKポスト。<br>在庫はQUICKSTACK。</h2>
+            <p>役割を分けることで、一覧ページが長くなりすぎず、各アプリの価値も薄まりません。訪問者は悩みに近い入口を選び、個別LPで詳しい説明へ進めます。</p>
+          </div>
+          <div class="compare-table">
+            <div class="compare-row"><div class="compare-label">発送入力</div><div class="compare-text">QUICKポスト。注文情報の貼り付け、宛名整理、クリックポスト入力前の作業を短縮。</div></div>
+            <div class="compare-row"><div class="compare-label">在庫管理</div><div class="compare-text">QUICKSTACK。SKU、在庫数、入出庫、棚卸、画像、CSV、バーコードを管理。</div></div>
+            <div class="compare-row"><div class="compare-label">対象</div><div class="compare-text">メルカリ、ヤフオク、ラクマ、Yahoo!フリマ、小規模EC、個人事業主。</div></div>
+            <div class="compare-row"><div class="compare-label">設計思想</div><div class="compare-text">難しい見た目を避け、日々の作業で迷わない画面と導線を優先。</div></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="page">
-      <div class="final-cta">
-        <h2>物販作業を、少しずつ短くする。</h2>
-        <p>
-  
+  <section class="section">
+    <div class="container story">
+      <div>
+        <div class="kicker">Why we build</div>
+        <h2>物販経験者が、日々の面倒を減らすために作っています。</h2>
+      </div>
+      <div>
+        <p>物販では、発送入力、在庫確認、棚卸、画像登録、商品数の増加に伴う管理負担が積み重なります。既存アプリは機能が多くても、見た目が複雑だと使い続けにくい問題があります。</p>
+        <p>DIYstation Appsでは、作業の流れを崩さず、使うほど負担が減るアプリを目指しています。特にQUICKSTACKは、商品数を増やすことに躊躇していた人が、在庫の見える化によって次の商品展開に進みやすくなることを狙っています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Expansion</div>
+        <h2 class="section-title">アプリが増えても、一覧に追加しやすい構成</h2>
+        <p class="section-desc">発送、在庫、出品補助、輸入原価計算、画像作成、メモ管理など、物販作業の周辺アプリを同じUIで拡張できます。</p>
+      </div>
+      <div class="cards-3">
+        <div class="feature-card"><div class="icon">AI</div><h3>出品補助アプリ</h3><p>商品画像・仕様・テンプレートから、商品説明文やLP画像を作成する導線を追加できます。</p></div>
+        <div class="feature-card"><div class="icon">¥</div><h3>輸入原価計算</h3><p>ラクマートなどの輸入コスト、為替、送料、利益率を試算するアプリ紹介へ拡張できます。</p></div>
+        <div class="feature-card"><div class="icon">N</div><h3>メモ・ナレッジ管理</h3><p>物販ノウハウ、商品リサーチ、作業手順を保存するメモ系アプリの入口として使えます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="cta">
+      <h2>作業が増える前に、仕組みを作る。</h2>
+      <p>物販は、商品数や発送数が増えるほど小さな手間が積み上がります。必要な部分から使えるアプリとして整えていきます。</p>
+      <div class="actions">
+        <a class="btn btn-ghost" href="./quickpost.html">QUICKポストを見る</a>
+        <a class="btn btn-ghost" href="./quickstack.html">QUICKSTACKを見る</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© DIYstation Apps</div>
+    <div>小規模物販・フリマ販売者向け業務効率化アプリ</div>
+  </div>
+</footer>
+<script src="./assets/site.js"></script>
+
+</body>
+</html>
