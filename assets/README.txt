@@ -56,3 +56,12 @@ QUICKポスト実画面反映:
 - assets/quickpost-screen.webp を追加
 - index.html のQUICKポストカードを実画面に差し替え
 - quickpost.html のヒーロー画像を実画面に差し替え
+
+
+アプリアイコン反映:
+- assets/quickstack-icon.png / .webp を追加（箱アイコン）
+- assets/quickpost-icon.png / .webp を追加（封筒アイコン）
+- index.html のアプリカードと上部タイルにアイコンを反映
+- quickpost.html / quickstack.html のヒーローに各アイコンを反映
+- スマホ下部CTAにも小アイコンを反映
+- favicon は QUICKSTACK アイコンに設定

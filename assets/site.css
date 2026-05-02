@@ -981,3 +981,79 @@ a, button {
     width: min(100%, 285px);
   }
 }
+
+
+/* =========================================================
+   App icon image styles
+   ========================================================= */
+.app-icon-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(15,23,42,.12);
+}
+
+.app-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.app-title-row .app-icon-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  flex: 0 0 auto;
+}
+
+.hero-app-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 14px 30px rgba(15,23,42,.16);
+  margin-bottom: 14px;
+}
+
+.mobile-bottom-cta .mini-cta-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 6px;
+}
+
+.mobile-bottom-cta a {
+  gap: 4px;
+}
+
+@media (max-width: 760px) {
+  .product-tile {
+    grid-template-columns: 46px 1fr;
+  }
+
+  .product-tile .app-icon-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+  }
+
+  .app-title-row {
+    gap: 10px;
+  }
+
+  .app-title-row .app-icon-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .hero-app-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+  }
+}
